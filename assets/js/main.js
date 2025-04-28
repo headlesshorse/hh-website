@@ -52,5 +52,5 @@ document.querySelectorAll('section *').forEach(element => {
 (async () => {
   const { size, url, co2, rating } = await (await fetch(`https://digitalbeacon.co/badge?url=${encodeURIComponent(window.location.href)}`)).json();
   const loadTime = (performance.timing.loadEventEnd - performance.timing.navigationStart) / 1000
-  document.getElementById('carbon').outerHTML = `<a href="${url}" target="_blank" data-more="${size} in ${loadTime.toFixed(2)}s using clean energy .𖥔 ݁˖">${rating.toUpperCase()} ${parseFloat(co2).toFixed(3)}g CO2</a>`;
+  document.getElementById('carbon').outerHTML = `<a href="${url}" target="_blank" data-more="${size} in ${loadTime.toFixed(2)}s using clean energy .𖥔 ݁˖">${rating.toUpperCase()} ${parseFloat(co2).toFixed(3)}g CO₂e</a>`;
 })();
